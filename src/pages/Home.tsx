@@ -7,36 +7,13 @@ import {
   ShieldCheck,
   ShoppingCart,
   Stethoscope,
-  Syringe,
 } from "lucide-react";
+import { siteDepartments } from "../data/departments";
 import { useDoctors } from "../hooks/useDoctors";
 import DoctorCard, {
   DoctorCardSkeleton,
   DoctorPhoto,
 } from "../components/doctors/DoctorCard";
-
-const departments = [
-  {
-    name: "Cardiology",
-    description: "Advanced heart and cardiovascular care.",
-    icon: HeartPulse,
-  },
-  {
-    name: "Neurology",
-    description: "Specialized care for brain and nervous system.",
-    icon: Stethoscope,
-  },
-  {
-    name: "Pediatrics",
-    description: "Complete healthcare for children.",
-    icon: HeartPulse,
-  },
-  {
-    name: "General Medicine",
-    description: "Comprehensive healthcare for all ages.",
-    icon: Syringe,
-  },
-];
 
 
 const primaryButtonClass =
@@ -116,18 +93,12 @@ const Home = () => {
 
           {/* Hero visual */}
           <div className="relative">
-            <div className="flex min-h-[480px] items-center justify-center rounded-3xl bg-gradient-to-br from-blue-600 to-blue-700 p-8 shadow-xl shadow-blue-600/20">
-              <div className="text-center text-white">
-                <HeartPulse className="mx-auto mb-6 h-28 w-28" />
-
-                <h2 className="text-3xl font-bold tracking-tight">
-                  Complete Healthcare
-                </h2>
-
-                <p className="mt-3 text-blue-100">
-                  Care you can trust, whenever you need it.
-                </p>
-              </div>
+            <div className="overflow-hidden rounded-3xl shadow-xl shadow-blue-600/20">
+              <img
+                src="/images/hero-hospital.svg"
+                alt="Medicare Hospital building"
+                className="aspect-[5/4] w-full object-cover"
+              />
             </div>
 
             <div className="absolute -bottom-5 -left-5 rounded-2xl bg-white p-5 shadow-xl">
@@ -246,22 +217,23 @@ const Home = () => {
             </p>
           </div>
 
-          <button
-            type="button"
+          <Link
+            to="/departments"
             className="flex items-center gap-2 font-semibold text-blue-600 transition hover:text-blue-700"
           >
             View All Departments
             <ArrowRight size={18} />
-          </button>
+          </Link>
         </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {departments.map((department) => {
+          {siteDepartments.slice(0, 4).map((department) => {
             const Icon = department.icon;
 
             return (
-              <div
-                key={department.name}
+              <Link
+                key={department.slug}
+                to={`/departments/${department.slug}`}
                 className="group rounded-2xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
@@ -273,17 +245,14 @@ const Home = () => {
                 </h3>
 
                 <p className="mt-2 text-sm leading-6 text-slate-500">
-                  {department.description}
+                  {department.tagline}
                 </p>
 
-                <button
-                  type="button"
-                  className="mt-5 flex items-center gap-2 text-sm font-semibold text-blue-600 transition group-hover:gap-3"
-                >
+                <span className="mt-5 flex items-center gap-2 text-sm font-semibold text-blue-600 transition group-hover:gap-3">
                   Learn More
                   <ArrowRight size={16} />
-                </button>
-              </div>
+                </span>
+              </Link>
             );
           })}
         </div>
@@ -350,7 +319,11 @@ const Home = () => {
           </div>
 
           <div className="flex justify-center">
-            <ShoppingCart className="h-40 w-40 text-blue-200" />
+            <img
+              src="/images/pharmacy-shelves.svg"
+              alt="Pharmacy shelves with medicines"
+              className="w-full max-w-md"
+            />
           </div>
         </div>
       </section>

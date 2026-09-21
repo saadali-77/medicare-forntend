@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Minus, Pill, Plus, ShoppingCart, Trash2 } from "lucide-react";
+import { Minus, Plus, ShoppingCart, Trash2 } from "lucide-react";
 import { useCart } from "../hooks/useCart";
 import { currency } from "../utils/currency";
 
@@ -65,9 +65,13 @@ const Cart = () => {
                 >
                   <Link
                     to={`/pharmacy/${medicine.id}`}
-                    className="flex h-20 w-20 shrink-0 items-center justify-center rounded-xl bg-blue-100"
+                    className="block h-20 w-20 shrink-0 overflow-hidden rounded-xl bg-blue-100"
                   >
-                    <Pill className="h-10 w-10 text-blue-600" />
+                    <img
+                      src={medicine.image}
+                      alt={medicine.name}
+                      className="h-full w-full object-cover"
+                    />
                   </Link>
 
                   <div className="flex-1">

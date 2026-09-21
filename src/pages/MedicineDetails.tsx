@@ -4,7 +4,6 @@ import {
   ArrowLeft,
   Minus,
   PackageX,
-  Pill,
   Plus,
   ShoppingCart,
 } from "lucide-react";
@@ -70,8 +69,12 @@ const MedicineDetails = () => {
           </Link>
 
           <div className="mt-8 grid gap-10 md:grid-cols-[320px_1fr] md:items-start">
-            <div className="relative flex h-72 items-center justify-center rounded-3xl bg-blue-100 md:h-80">
-              <Pill className="h-28 w-28 text-blue-600" />
+            <div className="relative h-72 overflow-hidden rounded-3xl bg-blue-100 md:h-80">
+              <img
+                src={medicine.image}
+                alt={medicine.name}
+                className="h-full w-full object-cover"
+              />
 
               {medicine.prescriptionRequired && (
                 <span className="absolute top-4 left-4 inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-700">
@@ -168,8 +171,13 @@ const MedicineDetails = () => {
                 to={`/pharmacy/${related.id}`}
                 className="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="flex h-40 items-center justify-center bg-blue-100">
-                  <Pill className="h-16 w-16 text-blue-600" />
+                <div className="h-48 overflow-hidden bg-blue-100">
+                  <img
+                    src={related.image}
+                    alt={related.name}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
                 </div>
 
                 <div className="p-6">

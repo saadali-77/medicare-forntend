@@ -3,6 +3,8 @@ import PublicLayout from './layouts/PublicLayout'
 import Home from './pages/Home'
 import Doctors from './pages/Doctors'
 import DoctorDetails from './pages/DoctorDetails'
+import Departments from './pages/Departments'
+import DepartmentDetails from './pages/DepartmentDetails'
 import Appointments from './pages/Appointments'
 import Pharmacy from './pages/Pharmacy'
 import MedicineDetails from './pages/MedicineDetails'
@@ -30,6 +32,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/doctors" element={<Doctors />} />
         <Route path="/doctors/:id" element={<DoctorDetails />} />
+        <Route path="/departments" element={<Departments />} />
+        <Route path="/departments/:slug" element={<DepartmentDetails />} />
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/pharmacy" element={<Pharmacy />} />
         <Route path="/pharmacy/:id" element={<MedicineDetails />} />

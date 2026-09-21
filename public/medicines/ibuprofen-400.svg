@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Ibuprofen">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffedd5"/>
+      <stop offset="1" stop-color="#fed7aa"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="340" cy="60" r="70" fill="#fff" fill-opacity="0.25"/>
+  <circle cx="50" cy="360" r="60" fill="#fff" fill-opacity="0.2"/>
+  <ellipse cx="200" cy="348" rx="125" ry="14" fill="rgba(15,23,42,0.13)"/>
+  <rect x="105" y="85" width="190" height="255" rx="14" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="105" y="85" width="190" height="64" rx="14" fill="#f97316"/>
+  <rect x="105" y="125" width="190" height="24" fill="#f97316"/>
+  <text x="200" y="124" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="2" fill="#fff">MEDICARE</text>
+  <text x="200" y="190" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Ibuprofen</text>
+  <rect x="145" y="222" width="110" height="30" rx="15" fill="#f97316" fill-opacity="0.12"/>
+  <text x="200" y="243" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#f97316">400 mg</text>
+  <g><circle cx="200" cy="308" r="17" fill="#fff" stroke="#f97316" stroke-width="3"/><line x1="188" y1="308" x2="212" y2="308" stroke="#f97316" stroke-width="3"/></g>
+  
+</svg>

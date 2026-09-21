@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Hydrocortisone">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fce7f3"/>
+      <stop offset="1" stop-color="#fbcfe8"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="340" cy="60" r="70" fill="#fff" fill-opacity="0.25"/>
+  <circle cx="50" cy="360" r="60" fill="#fff" fill-opacity="0.2"/>
+  <ellipse cx="200" cy="300" rx="150" ry="14" fill="rgba(15,23,42,0.13)"/>
+  <rect x="56" y="180" width="30" height="64" rx="4" fill="#db2777" fill-opacity="0.35"/>
+  <g stroke="#db2777" stroke-opacity="0.6" stroke-width="2"><line x1="56" y1="188" x2="86" y2="188"/><line x1="56" y1="196" x2="86" y2="196"/><line x1="56" y1="204" x2="86" y2="204"/><line x1="56" y1="212" x2="86" y2="212"/><line x1="56" y1="220" x2="86" y2="220"/><line x1="56" y1="228" x2="86" y2="228"/><line x1="56" y1="236" x2="86" y2="236"/></g>
+  <rect x="86" y="168" width="214" height="88" rx="12" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="86" y="168" width="214" height="26" rx="12" fill="#db2777"/>
+  <rect x="86" y="182" width="214" height="12" fill="#db2777"/>
+  <text x="193" y="187" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#fff">MEDICARE</text>
+  <text x="193" y="224" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Hydrocortisone</text>
+  <text x="193" y="246" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="14" font-weight="600" fill="#db2777">Cream 1%</text>
+  <rect x="300" y="182" width="54" height="60" rx="8" fill="#1e293b"/>
+  <rect x="354" y="198" width="14" height="28" rx="4" fill="#334155"/>
+</svg>

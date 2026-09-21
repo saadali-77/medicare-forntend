@@ -113,8 +113,16 @@ const OrderSuccess = () => {
           <ul className="mt-4 divide-y divide-slate-100">
             {order.items.map((item) => (
               <li key={item.id} className="flex items-center gap-3 py-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-blue-100">
-                  <Pill size={20} className="text-blue-600" />
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-blue-100">
+                  {item.image ? (
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <Pill size={20} className="text-blue-600" />
+                  )}
                 </div>
 
                 <div className="flex-1">

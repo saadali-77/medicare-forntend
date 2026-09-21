@@ -6,7 +6,6 @@ import {
   Banknote,
   CreditCard,
   MapPin,
-  Pill,
   ShoppingCart,
 } from "lucide-react";
 import { useCart } from "../hooks/useCart";
@@ -102,6 +101,7 @@ const Checkout = () => {
       items: cartDetails.map(({ medicine, quantity }) => ({
         id: medicine.id,
         name: medicine.name,
+        image: medicine.image,
         quantity,
         price: medicine.price,
       })),
@@ -412,8 +412,12 @@ const Checkout = () => {
               <ul className="mt-6 space-y-4">
                 {cartDetails.map(({ medicine, quantity }) => (
                   <li key={medicine.id} className="flex items-center gap-3">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-blue-100">
-                      <Pill size={20} className="text-blue-600" />
+                    <div className="h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-blue-100">
+                      <img
+                        src={medicine.image}
+                        alt={medicine.name}
+                        className="h-full w-full object-cover"
+                      />
                     </div>
 
                     <div className="flex-1">

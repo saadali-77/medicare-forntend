@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Vitamin C">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fef3c7"/>
+      <stop offset="1" stop-color="#fde68a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="340" cy="60" r="70" fill="#fff" fill-opacity="0.25"/>
+  <circle cx="50" cy="360" r="60" fill="#fff" fill-opacity="0.2"/>
+  <ellipse cx="200" cy="352" rx="125" ry="14" fill="rgba(15,23,42,0.13)"/>
+  <rect x="110" y="155" width="180" height="187" rx="26" fill="#fff" stroke="#f59e0b" stroke-width="3"/>
+  <rect x="118" y="108" width="164" height="52" rx="12" fill="#f59e0b"/>
+  <g stroke="#fff" stroke-opacity="0.4" stroke-width="3"><line x1="140" y1="118" x2="140" y2="150"/><line x1="160" y1="118" x2="160" y2="150"/><line x1="180" y1="118" x2="180" y2="150"/><line x1="200" y1="118" x2="200" y2="150"/><line x1="220" y1="118" x2="220" y2="150"/><line x1="240" y1="118" x2="240" y2="150"/><line x1="260" y1="118" x2="260" y2="150"/></g>
+  <rect x="127" y="188" width="146" height="130" rx="12" fill="#f59e0b" fill-opacity="0.1"/>
+  <text x="200" y="212" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#f59e0b">MEDICARE</text>
+  <text x="200" y="246" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Vitamin C</text>
+  <text x="200" y="282" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#f59e0b">1000 mg</text>
+</svg>

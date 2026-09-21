@@ -8,11 +8,13 @@ export interface Medicine {
   price: number;
   prescriptionRequired: boolean;
   inStock: boolean;
+  image: string;
 }
 
 export const medicines: Medicine[] = [
   {
     id: "paracetamol-500",
+    image: "/medicines/paracetamol-500.svg",
     name: "Paracetamol 500mg",
     category: "Pain Relief",
     description: "Fast-acting relief from fever, headaches and mild to moderate pain.",
@@ -24,6 +26,7 @@ export const medicines: Medicine[] = [
   },
   {
     id: "ibuprofen-400",
+    image: "/medicines/ibuprofen-400.svg",
     name: "Ibuprofen 400mg",
     category: "Pain Relief",
     description: "Anti-inflammatory tablets for pain, swelling and fever reduction.",
@@ -35,6 +38,7 @@ export const medicines: Medicine[] = [
   },
   {
     id: "amoxicillin-500",
+    image: "/medicines/amoxicillin-500.svg",
     name: "Amoxicillin 500mg",
     category: "Antibiotics",
     description: "Broad-spectrum antibiotic used to treat a variety of bacterial infections.",
@@ -46,6 +50,7 @@ export const medicines: Medicine[] = [
   },
   {
     id: "azithromycin-250",
+    image: "/medicines/azithromycin-250.svg",
     name: "Azithromycin 250mg",
     category: "Antibiotics",
     description: "Prescription antibiotic commonly used for respiratory and skin infections.",
@@ -57,6 +62,7 @@ export const medicines: Medicine[] = [
   },
   {
     id: "cetirizine-10",
+    image: "/medicines/cetirizine-10.svg",
     name: "Cetirizine 10mg",
     category: "Allergy & Cold",
     description: "Non-drowsy antihistamine for allergy relief, sneezing and itchy eyes.",
@@ -68,6 +74,7 @@ export const medicines: Medicine[] = [
   },
   {
     id: "cough-syrup-100ml",
+    image: "/medicines/cough-syrup-100ml.svg",
     name: "Cough Relief Syrup",
     category: "Allergy & Cold",
     description: "Soothing syrup that eases dry and chesty coughs for adults and children.",
@@ -79,6 +86,7 @@ export const medicines: Medicine[] = [
   },
   {
     id: "vitamin-c-1000",
+    image: "/medicines/vitamin-c-1000.svg",
     name: "Vitamin C 1000mg",
     category: "Vitamins & Supplements",
     description: "High-strength vitamin C tablets to support everyday immune health.",
@@ -90,6 +98,7 @@ export const medicines: Medicine[] = [
   },
   {
     id: "multivitamin-daily",
+    image: "/medicines/multivitamin-daily.svg",
     name: "Daily Multivitamin",
     category: "Vitamins & Supplements",
     description: "Complete multivitamin blend with essential vitamins and minerals.",
@@ -101,6 +110,7 @@ export const medicines: Medicine[] = [
   },
   {
     id: "metformin-500",
+    image: "/medicines/metformin-500.svg",
     name: "Metformin 500mg",
     category: "Diabetes Care",
     description: "Prescription medication used to help control blood sugar levels.",
@@ -112,6 +122,7 @@ export const medicines: Medicine[] = [
   },
   {
     id: "glucose-test-strips",
+    image: "/medicines/glucose-test-strips.svg",
     name: "Glucose Test Strips",
     category: "Diabetes Care",
     description: "Accurate blood glucose test strips compatible with most home monitors.",
@@ -123,6 +134,7 @@ export const medicines: Medicine[] = [
   },
   {
     id: "hydrocortisone-cream",
+    image: "/medicines/hydrocortisone-cream.svg",
     name: "Hydrocortisone Cream 1%",
     category: "Skin Care",
     description: "Topical cream that relieves itching, redness and skin irritation.",
@@ -134,6 +146,7 @@ export const medicines: Medicine[] = [
   },
   {
     id: "antiseptic-solution",
+    image: "/medicines/antiseptic-solution.svg",
     name: "Antiseptic Solution",
     category: "First Aid",
     description: "Multipurpose antiseptic for cleaning minor cuts, grazes and wounds.",

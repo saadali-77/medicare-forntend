@@ -4,6 +4,7 @@ import { hospital } from "../../data/hospital";
 
 const quickLinks = [
   { to: "/doctors", label: "Our Doctors" },
+  { to: "/departments", label: "Departments" },
   { to: "/appointments", label: "Book Appointment" },
   { to: "/pharmacy", label: "Online Pharmacy" },
   { to: "/about", label: "About Us" },

@@ -4,7 +4,6 @@ import {
   AlertCircle,
   Minus,
   PackageX,
-  Pill,
   Plus,
   Search,
   ShoppingCart,
@@ -136,9 +135,14 @@ const Pharmacy = () => {
                     >
                       <Link
                         to={`/pharmacy/${medicine.id}`}
-                        className="relative flex h-36 items-center justify-center bg-blue-100"
+                        className="relative block h-48 overflow-hidden bg-blue-100"
                       >
-                        <Pill className="h-14 w-14 text-blue-600" />
+                        <img
+                          src={medicine.image}
+                          alt={medicine.name}
+                          loading="lazy"
+                          className="h-full w-full object-cover"
+                        />
 
                         {medicine.prescriptionRequired && (
                           <span className="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-700">
