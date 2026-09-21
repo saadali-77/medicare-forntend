@@ -6,7 +6,7 @@ import { useCart } from "../../hooks/useCart";
 import LogoutButton from "../auth/LogoutButton";
 
 const itemClass =
-  "flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-slate-700 transition hover:bg-slate-50 hover:text-sky-600";
+  "flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-slate-700 transition hover:bg-slate-50 hover:text-blue-600";
 
 const ProfileMenu = () => {
   const { user, isAdmin } = useAuth();
@@ -41,7 +41,7 @@ const ProfileMenu = () => {
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
-        className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-sky-600 text-sm font-semibold text-white transition-colors hover:bg-sky-700"
+        className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-blue-600 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
         aria-label="Open profile menu"
         aria-expanded={open}
       >
@@ -100,7 +100,7 @@ const ProfileMenu = () => {
               <ShoppingCart size={16} />
               My Cart
               {cartCount > 0 && (
-                <span className="ml-auto rounded-full bg-sky-50 px-2 py-0.5 text-xs font-semibold text-sky-700">
+                <span className="ml-auto rounded-full bg-blue-50 px-2 py-0.5 text-xs font-semibold text-blue-700">
                   {cartCount}
                 </span>
               )}

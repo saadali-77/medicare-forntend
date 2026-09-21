@@ -1,7 +1,9 @@
 import { useMemo, useState } from "react";
 import { Search } from "lucide-react";
 import { useDoctors } from "../hooks/useDoctors";
-import DoctorCard from "../components/doctors/DoctorCard";
+import DoctorCard, {
+  DoctorCardSkeleton,
+} from "../components/doctors/DoctorCard";
 import { getDoctorName } from "../utils/adminDoctor";
 import { getErrorMessage } from "../utils/errors";
 
@@ -95,7 +97,11 @@ const Doctors = () => {
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         {isLoading ? (
-          <p className="py-20 text-center text-slate-500">Loading doctors...</p>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[0, 1, 2].map((item) => (
+              <DoctorCardSkeleton key={item} />
+            ))}
+          </div>
         ) : error ? (
           <p className="rounded-lg bg-red-50 px-4 py-3 text-center text-sm text-red-700">
             {getErrorMessage(error)}

@@ -10,7 +10,10 @@ import {
   Syringe,
 } from "lucide-react";
 import { useDoctors } from "../hooks/useDoctors";
-import DoctorCard from "../components/doctors/DoctorCard";
+import DoctorCard, {
+  DoctorCardSkeleton,
+  DoctorPhoto,
+} from "../components/doctors/DoctorCard";
 
 const departments = [
   {
@@ -144,15 +147,27 @@ const Home = () => {
 
             <div className="absolute -top-5 -right-5 rounded-2xl bg-white p-5 shadow-xl">
               <div className="flex items-center gap-3">
-                <div className="rounded-full bg-blue-100 p-3 text-blue-600">
-                  <ShieldCheck size={20} />
+                <div className="flex -space-x-3">
+                  {featuredDoctors.map((doctor) => (
+                    <div
+                      key={doctor.id}
+                      className="h-10 w-10 overflow-hidden rounded-full border-2 border-white"
+                    >
+                      <DoctorPhoto doctor={doctor} />
+                    </div>
+                  ))}
+                  {featuredDoctors.length === 0 && (
+                    <div className="rounded-full bg-blue-100 p-3 text-blue-600">
+                      <ShieldCheck size={20} />
+                    </div>
+                  )}
                 </div>
 
                 <div>
                   <p className="text-sm font-semibold text-slate-900">
-                    Certified Care
+                    Expert Doctors
                   </p>
-                  <p className="text-xs text-slate-500">ISO 9001 Facility</p>
+                  <p className="text-xs text-slate-500">Ready to help you</p>
                 </div>
               </div>
             </div>
@@ -299,11 +314,8 @@ const Home = () => {
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {doctorsQuery.isLoading && (
-              <p className="col-span-full py-10 text-center text-slate-500">
-                Loading doctors...
-              </p>
-            )}
+            {doctorsQuery.isLoading &&
+              [0, 1, 2].map((item) => <DoctorCardSkeleton key={item} />)}
             {featuredDoctors.map((doctor) => (
               <DoctorCard key={doctor.id} doctor={doctor} />
             ))}
