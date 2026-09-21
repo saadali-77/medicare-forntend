@@ -3,7 +3,7 @@ import { store } from "../store/store";
 import { logout } from "../store/authSlice";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "https://medicare-backend-omega.vercel.app/",
   headers: {
     "Content-Type": "application/json",
   },
